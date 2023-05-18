@@ -7,7 +7,7 @@ const { data } = await useFetch(`/api/setting`);
     <div
       class="container mx-auto flex items-center gap-3 overflow-x-scroll px-3"
     >
-      <NuxtLink href="/" class="flex-shrink-0 px-3 py-3">
+      <NuxtLink href="/" class="flex-shrink-0 px-3 py-4">
         <img src="/logo.svg" class="h-6" />
       </NuxtLink>
       <div v-if="data && data.navigation" class="flex items-center gap-3">
@@ -15,7 +15,7 @@ const { data } = await useFetch(`/api/setting`);
           v-for="item in data.navigation"
           :key="item.url"
           :href="item.url"
-          class="whitespace-nowrap px-3 py-3 font-bold transition-all"
+          class="whitespace-nowrap px-3 py-3 text-lg font-bold transition-all"
         >
           <span>{{ item.label }}</span>
         </NuxtLink>
