@@ -33,6 +33,7 @@ useSeoMeta({
           v-if="data.feature_image"
           :src="data.feature_image"
           :alt="data.feature_image_alt || undefined"
+          class="aspect-video h-full w-full object-cover"
         />
         <div
           class="absolute inset-0 bg-gradient-to-t from-zinc-100 to-transparent to-50%"
