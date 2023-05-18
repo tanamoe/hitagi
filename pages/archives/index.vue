@@ -1,3 +1,3 @@
 <script setup lang="ts">
-await navigateTo("/");
+await navigateTo("/", { replace: true });
 </script>
