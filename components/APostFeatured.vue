@@ -14,7 +14,9 @@ defineProps<{
         provider="ghost"
         :src="post.feature_image"
         :alt="post.feature_image_alt || undefined"
-        class="aspect-[21/9] h-full w-full object-cover"
+        :img-attrs="{
+          class: 'aspect-[21/9] h-full w-full object-cover',
+        }"
       />
     </div>
     <div class="px-6 sm:px-0">
