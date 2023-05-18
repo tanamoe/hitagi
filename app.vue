@@ -6,6 +6,6 @@
 
 <style>
 html {
-  @apply bg-neutral-50;
+  @apply bg-zinc-100 text-zinc-800;
 }
 </style>

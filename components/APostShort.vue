@@ -14,7 +14,7 @@ defineProps<{
     <div>
       <span
         v-if="post.primary_tag"
-        class="font-bold uppercase text-neutral-600"
+        class="font-bold uppercase text-zinc-600"
         :style="{ color: post.primary_tag.accent_color || undefined }"
       >
         {{ post.primary_tag.name }}

@@ -8,8 +8,8 @@ export default {
         primary: "#f8b60b",
       },
       fontFamily: {
-        sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
-        heading: "Reem Kufi Fun",
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        heading: "Alexandria",
       },
     },
   },
