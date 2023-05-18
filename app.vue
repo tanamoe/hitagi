@@ -1,3 +1,14 @@
+<script setup lang="ts">
+const settingRes = await useFetch(`/api/setting`);
+const setting = settingRes.data;
+
+useSeoMeta({
+  ogLocale: setting.value?.lang,
+  ogSiteName: setting.value?.title,
+  twitterCard: "summary_large_image",
+});
+</script>
+
 <template>
   <NuxtLayout>
     <Head>

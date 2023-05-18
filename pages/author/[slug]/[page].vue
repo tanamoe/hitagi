@@ -12,6 +12,16 @@ if (error.value)
     statusCode: error.value.statusCode,
     statusMessage: error.value.statusMessage,
   });
+
+const author = data.value?.at(0)?.primary_author;
+
+useSeoMeta({
+  title: `Tác giả ${author?.name} - Tana Blog`,
+  ogTitle: `Tác giả ${author?.name}`,
+  description: author?.meta_description,
+  ogDescription: author?.meta_description,
+  ogImage: author?.profile_image || author?.cover_image,
+});
 </script>
 
 <template>

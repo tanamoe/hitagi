@@ -13,6 +13,8 @@ if (error.value)
 
 useSeoMeta({
   title: `${data.value?.title} - Tana Blog`,
+  author: data.value?.primary_author?.name,
+  ogType: "article",
   ogTitle: data.value?.og_title || data.value?.title,
   description: data.value?.meta_description || data.value?.excerpt,
   ogDescription:
@@ -20,7 +22,6 @@ useSeoMeta({
     data.value?.meta_description ||
     data.value?.excerpt,
   ogImage: data.value?.og_image || data.value?.feature_image,
-  twitterCard: "summary_large_image",
 });
 </script>
 

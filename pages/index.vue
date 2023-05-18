@@ -15,8 +15,7 @@ useSeoMeta({
   ogTitle: setting.value?.og_title,
   description: setting.value?.description,
   ogDescription: setting.value?.og_description,
-  ogImage: setting.value?.og_image,
-  twitterCard: "summary_large_image",
+  ogImage: setting.value?.og_image || setting.value?.cover_image,
 });
 </script>
 

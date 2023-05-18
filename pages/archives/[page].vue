@@ -12,6 +12,11 @@ if (error.value)
     statusCode: error.value.statusCode,
     statusMessage: error.value.statusMessage,
   });
+
+useSeoMeta({
+  title: `Lưu trữ trang ${route.params.page} - Tana Blog`,
+  ogTitle: `Lưu trữ trang ${route.params.page}`,
+});
 </script>
 
 <template>

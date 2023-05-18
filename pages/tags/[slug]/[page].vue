@@ -12,6 +12,17 @@ if (error.value)
     statusCode: error.value.statusCode,
     statusMessage: error.value.statusMessage,
   });
+
+const tag = data.value?.at(0)?.primary_tag;
+
+useSeoMeta({
+  title: `${tag?.name} - Tana Blog`,
+  ogTitle: tag?.og_title || tag?.name,
+  description: tag?.description,
+  ogDescription:
+    tag?.og_description || tag?.meta_description || tag?.description,
+  ogImage: tag?.og_image || tag?.feature_image,
+});
 </script>
 
 <template>
