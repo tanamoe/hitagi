@@ -1,10 +1,9 @@
 <script setup lang="ts">
-const settingRes = await useFetch(`/api/setting`);
-const setting = settingRes.data;
+const { data } = await useFetch(`/api/setting`);
 
 useSeoMeta({
-  ogLocale: setting.value?.lang,
-  ogSiteName: setting.value?.title,
+  ogLocale: data.value?.lang,
+  ogSiteName: data.value?.title,
   twitterCard: "summary_large_image",
 });
 </script>
