@@ -1,25 +1,20 @@
 <script setup lang="ts">
 const route = useRoute();
-const ghost = useGhost();
 
-const posts = await ghost.posts
-  .browse({
-    include: ["authors", "tags"],
-    page: parseInt(route.params.page as string),
-  })
-  .catch((e) => {
-    console.error(e);
+const { data, error } = await useFetch(
+  `/api/archives/${route.params.page as string}`
+);
 
-    throw createError({
-      statusCode: 404,
-      statusMessage: "Không tìm thấy trang",
-    });
+if (error.value)
+  throw createError({
+    statusCode: error.value.statusCode,
+    statusMessage: error.value.statusMessage,
   });
 </script>
 
 <template>
   <main>
-    <div v-for="post in posts" :key="post.id">
+    <div v-for="post in data" :key="post.id">
       <APostLong :post="post" />
     </div>
   </main>
