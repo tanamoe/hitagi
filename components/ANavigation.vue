@@ -5,7 +5,7 @@ const { data } = await useFetch(`/api/setting`);
 <template>
   <nav class="sticky top-0 z-50 h-full w-full bg-zinc-100/75 backdrop-blur-md">
     <div
-      class="container mx-auto flex items-center gap-3 overflow-x-scroll px-3"
+      class="container mx-auto flex items-center gap-3 overflow-x-scroll px-3 sm:overflow-x-hidden"
     >
       <NuxtLink href="/" class="flex-shrink-0 px-3 py-4">
         <img src="/logo.svg" class="h-6" />
