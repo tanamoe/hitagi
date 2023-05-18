@@ -10,6 +10,8 @@ useSeoMeta({
 
 <template>
   <NuxtLayout>
+    <NuxtLoadingIndicator color="#f8b60b" :height="4" />
+
     <Head>
       <Link rel="icon" type="image/png" href="/favicon.png" />
       <!--[if IE]><link rel="shortcut icon" href="/favicon.ico" /><![endif]-->
