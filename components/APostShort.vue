@@ -11,7 +11,7 @@ defineProps<{
     <div class="feature-image relative overflow-hidden transition-shadow">
       <img v-if="post.feature_image" :src="post.feature_image" />
     </div>
-    <div>
+    <div class="px-6 sm:px-0">
       <span
         v-if="post.primary_tag"
         class="font-bold uppercase text-zinc-600"

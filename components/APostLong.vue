@@ -14,7 +14,7 @@ defineProps<{
     <div class="feature-image w-full transition-shadow md:w-72">
       <img v-if="post.feature_image" :src="post.feature_image" />
     </div>
-    <div class="flex-1">
+    <div class="flex-1 px-6 sm:px-0">
       <span
         v-if="post.primary_tag"
         class="font-bold uppercase text-zinc-600"

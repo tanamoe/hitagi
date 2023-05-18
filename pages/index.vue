@@ -9,17 +9,24 @@ if (error.value)
 </script>
 
 <template>
-  <div
-    v-if="data"
-    class="grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 lg:grid-cols-3"
-  >
+  <div>
     <div
-      v-for="(post, i) in data"
-      :key="post.id"
-      :class="[i === 0 && 'md:col-span-2 lg:col-span-3']"
+      class="mb-12 grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 lg:grid-cols-3"
     >
-      <APostFeatured v-if="i === 0" :post="post" />
-      <APostShort v-else :post="post" />
+      <div
+        v-for="(post, i) in data"
+        :key="post.id"
+        :class="[i === 0 && 'md:col-span-2 lg:col-span-3']"
+      >
+        <APostFeatured v-if="i === 0" :post="post" />
+        <APostShort v-else :post="post" />
+      </div>
     </div>
+    <NuxtLink
+      href="/archives/1"
+      class="flex items-center justify-end gap-3 px-6 sm:px-0"
+    >
+      <span>Xem thêm</span><Icon name="bi:arrow-right" />
+    </NuxtLink>
   </div>
 </template>

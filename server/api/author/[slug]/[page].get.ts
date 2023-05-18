@@ -16,6 +16,7 @@ export default defineEventHandler(async (event) => {
         "primary_author",
         "created_at",
       ],
+      filter: `author:${event.context.params.slug}`,
       page: parseInt(event.context.params.page),
     })
     .catch((e) => {

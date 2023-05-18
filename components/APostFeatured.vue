@@ -15,7 +15,7 @@ defineProps<{
         class="aspect-[21/9] h-full w-full object-cover"
       />
     </div>
-    <div>
+    <div class="px-6 sm:px-0">
       <span
         v-if="post.primary_tag"
         class="font-bold uppercase text-zinc-600"
@@ -50,8 +50,7 @@ defineProps<{
 }
 
 .feature-image::before {
-  @apply absolute inset-0 z-10 block h-full w-full -translate-x-[101%];
-  background-color: #89c4f4;
+  @apply absolute inset-0 z-10 block h-full w-full -translate-x-[101%] bg-primary;
   content: "";
   animation: imagescroll 1s cubic-bezier(0.3, 1, 0.7, 1);
 }

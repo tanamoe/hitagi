@@ -4,7 +4,7 @@ import type { PostsOrPages } from "@tryghost/content-api";
 const route = useRoute();
 
 const { data, error } = await useFetch<PostsOrPages>(
-  `/api/archives/${route.params.page as string}`
+  `/api/author/${route.params.slug as string}/${route.params.page as string}`
 );
 
 if (error.value)
