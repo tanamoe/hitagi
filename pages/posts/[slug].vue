@@ -29,8 +29,9 @@ useSeoMeta({
   <article v-if="data">
     <header class="flex flex-col">
       <div class="relative w-4/5 self-end">
-        <img
+        <nuxt-picture
           v-if="data.feature_image"
+          provider="ghost"
           :src="data.feature_image"
           :alt="data.feature_image_alt || undefined"
           class="aspect-video h-full w-full object-cover"
@@ -55,26 +56,7 @@ useSeoMeta({
         >
           {{ data.title }}
         </h1>
-        <div class="mt-3 flex items-center gap-3">
-          <NuxtLink
-            v-if="data.primary_author"
-            :href="`/author/${data.primary_author.slug}`"
-            class="flex items-center gap-3"
-          >
-            <img
-              v-if="data.primary_author.profile_image"
-              :src="data.primary_author.profile_image"
-              class="h-6 w-6 rounded-full object-cover"
-            />
-            <span v-if="data.primary_author">
-              {{ data.primary_author.name }}
-            </span>
-          </NuxtLink>
-          &middot;
-          <span v-if="data.created_at">
-            {{ new Date(data.created_at).toLocaleDateString("vi-VN") }}
-          </span>
-        </div>
+        <AMeta :author="data.primary_author" :timestamp="data.created_at" />
       </div>
     </header>
     <div

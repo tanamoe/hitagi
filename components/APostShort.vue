@@ -9,7 +9,12 @@ defineProps<{
 <template>
   <NuxtLink :href="`/posts/${post.slug}`" class="article space-y-6">
     <div class="feature-image relative overflow-hidden transition-shadow">
-      <img v-if="post.feature_image" :src="post.feature_image" />
+      <nuxt-picture
+        v-if="post.feature_image"
+        provider="ghost"
+        :src="post.feature_image"
+        :alt="post.feature_image_alt || undefined"
+      />
     </div>
     <div class="px-6 sm:px-0">
       <span
@@ -22,20 +27,7 @@ defineProps<{
       <h2 class="mt-1 font-heading text-3xl">
         {{ post.title }}
       </h2>
-      <div class="mt-3 flex items-center gap-3">
-        <img
-          v-if="post.primary_author?.profile_image"
-          :src="post.primary_author.profile_image"
-          class="h-6 w-6 rounded-full object-cover"
-        />
-        <span v-if="post.primary_author">
-          {{ post.primary_author.name }}
-        </span>
-        &middot;
-        <span v-if="post.created_at">{{
-          new Date(post.created_at).toLocaleDateString("vi-VN")
-        }}</span>
-      </div>
+      <AMeta :author="post.primary_author" :timestamp="post.created_at" />
     </div>
   </NuxtLink>
 </template>

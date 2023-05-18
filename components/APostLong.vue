@@ -12,7 +12,12 @@ defineProps<{
     class="article flex flex-col items-center gap-6 md:flex-row"
   >
     <div class="feature-image w-full transition-shadow md:w-72">
-      <img v-if="post.feature_image" :src="post.feature_image" />
+      <nuxt-picture
+        v-if="post.feature_image"
+        provider="ghost"
+        :src="post.feature_image"
+        :alt="post.feature_image_alt || undefined"
+      />
     </div>
     <div class="flex-1 px-6 sm:px-0">
       <span
@@ -25,20 +30,7 @@ defineProps<{
       <h2 class="mt-1 font-heading text-3xl">
         {{ post.title }}
       </h2>
-      <div class="mt-3 flex items-center gap-3">
-        <img
-          v-if="post.primary_author?.profile_image"
-          :src="post.primary_author.profile_image"
-          class="h-6 w-6 rounded-full object-cover"
-        />
-        <span v-if="post.primary_author">
-          {{ post.primary_author.name }}
-        </span>
-        &middot;
-        <span v-if="post.created_at">{{
-          new Date(post.created_at).toLocaleDateString("vi-VN")
-        }}</span>
-      </div>
+      <AMeta :author="post.primary_author" :timestamp="post.created_at" />
     </div>
   </NuxtLink>
 </template>
