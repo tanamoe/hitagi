@@ -32,7 +32,7 @@ useSeoMeta({
     </div>
 
     <div v-for="post in data" v-else :key="post.id">
-      <APostLong :post="post" />
+      <APostLong :post="post" class="mb-6" />
     </div>
 
     <APagination
