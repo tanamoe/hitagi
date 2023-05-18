@@ -10,6 +10,18 @@ if (error.value)
     statusCode: error.value.statusCode,
     statusMessage: error.value.statusMessage,
   });
+
+useSeoMeta({
+  title: `${data.value?.title} - Tana Blog`,
+  ogTitle: data.value?.og_title || data.value?.title,
+  description: data.value?.meta_description || data.value?.excerpt,
+  ogDescription:
+    data.value?.og_description ||
+    data.value?.meta_description ||
+    data.value?.excerpt,
+  ogImage: data.value?.og_image || data.value?.feature_image,
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>

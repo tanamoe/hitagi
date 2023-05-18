@@ -1,11 +1,23 @@
 <script setup lang="ts">
 const { data, error } = await useFetch(`/api/home`);
 
+const settingRes = await useFetch(`/api/setting`);
+const setting = settingRes.data;
+
 if (error.value)
   throw createError({
     statusCode: error.value.statusCode,
     statusMessage: error.value.statusMessage,
   });
+
+useSeoMeta({
+  title: setting.value?.title,
+  ogTitle: setting.value?.og_title,
+  description: setting.value?.description,
+  ogDescription: setting.value?.og_description,
+  ogImage: setting.value?.og_image,
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>

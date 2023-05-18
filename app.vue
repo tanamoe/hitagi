@@ -1,5 +1,10 @@
 <template>
   <NuxtLayout>
+    <Head>
+      <Link rel="icon" type="image/png" href="/favicon.png" />
+      <!--[if IE]><link rel="shortcut icon" href="/favicon.ico" /><![endif]-->
+    </Head>
+
     <NuxtPage />
   </NuxtLayout>
 </template>
