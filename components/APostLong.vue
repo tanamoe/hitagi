@@ -9,9 +9,9 @@ defineProps<{
 <template>
   <NuxtLink
     :href="`/posts/${post.slug}`"
-    class="flex flex-col items-center gap-6 md:flex-row"
+    class="article flex flex-col items-center gap-6 md:flex-row"
   >
-    <div class="w-full md:w-72">
+    <div class="feature-image w-full transition-shadow md:w-72">
       <img v-if="post.feature_image" :src="post.feature_image" />
     </div>
     <div class="flex-1">
@@ -42,3 +42,9 @@ defineProps<{
     </div>
   </NuxtLink>
 </template>
+
+<style scoped>
+.article:hover > .feature-image {
+  @apply shadow-offset shadow-primary;
+}
+</style>

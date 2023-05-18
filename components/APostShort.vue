@@ -7,8 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <NuxtLink :href="`/posts/${post.slug}`" class="space-y-6">
-    <div class="feature-image relative overflow-hidden">
+  <NuxtLink :href="`/posts/${post.slug}`" class="article space-y-6">
+    <div class="feature-image relative overflow-hidden transition-shadow">
       <img v-if="post.feature_image" :src="post.feature_image" />
     </div>
     <div>
@@ -39,3 +39,9 @@ defineProps<{
     </div>
   </NuxtLink>
 </template>
+
+<style scoped>
+.article:hover > .feature-image {
+  @apply shadow-offset shadow-primary;
+}
+</style>
