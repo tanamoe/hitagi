@@ -62,10 +62,24 @@ useSeoMeta({
       </div>
     </header>
     <div
-      class="prose prose-zinc mx-auto lg:prose-lg prose-headings:px-6 prose-p:px-6 prose-a:decoration-2"
+      class="prose prose-zinc mx-auto lg:prose-lg prose-headings:px-6 prose-p:px-6 prose-a:decoration-2 prose-figcaption:px-6 sm:prose-figcaption:px-0"
     >
       <!-- eslint-disable-next-line vue/no-v-html -->
       <div v-html="data.html" />
     </div>
   </article>
 </template>
+
+<style>
+.prose .kg-callout-card {
+  @apply mx-6 flex gap-6 p-6;
+}
+
+.kg-callout-emoji {
+  @apply text-2xl;
+}
+
+.kg-callout-card-grey {
+  @apply bg-zinc-200;
+}
+</style>
