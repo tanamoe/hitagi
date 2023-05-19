@@ -25,7 +25,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div v-if="data">
+  <div v-if="data" class="md:px-6">
     <div v-if="data.length == 0" class="h-[90vh]">
       <h4>Không tìm thấy kết quả</h4>
     </div>

@@ -40,7 +40,7 @@ useSeoMeta({
 
 <template>
   <article v-if="data">
-    <header class="flex flex-col">
+    <header class="flex flex-col md:px-6">
       <div class="relative w-4/5 self-end">
         <nuxt-picture
           v-if="data.feature_image"
@@ -55,7 +55,7 @@ useSeoMeta({
           class="absolute inset-0 bg-gradient-to-t from-zinc-100 to-transparent to-50%"
         />
       </div>
-      <div class="-translate-y-16 px-6 sm:px-0">
+      <div class="-translate-y-16 px-6">
         <div class="mb-3">
           <NuxtLink
             v-if="data.primary_tag"
