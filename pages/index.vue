@@ -26,7 +26,7 @@ useSeoMeta({
 <template>
   <div>
     <div
-      class="mb-12 grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 lg:grid-cols-3"
+      class="mb-12 grid grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-2 md:px-6 lg:grid-cols-3"
     >
       <div
         v-for="(post, i) in data"
@@ -39,7 +39,7 @@ useSeoMeta({
     </div>
     <NuxtLink
       href="/archives/1"
-      class="flex items-center justify-end gap-3 px-6 sm:px-0"
+      class="flex items-center justify-end gap-3 px-6"
     >
       <span>Xem thêm</span><Icon name="bi:arrow-right" />
     </NuxtLink>
