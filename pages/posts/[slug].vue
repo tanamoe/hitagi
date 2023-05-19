@@ -22,6 +22,10 @@ useSeoMeta({
     data.value?.meta_description ||
     data.value?.excerpt,
   ogImage: data.value?.og_image || data.value?.feature_image,
+  twitterImage:
+    data.value?.twitter_image ||
+    data.value?.og_image ||
+    data.value?.feature_image,
 });
 </script>
 
