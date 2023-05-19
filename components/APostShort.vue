@@ -35,7 +35,11 @@ defineProps<{
         </div>
       </div>
     </NuxtLink>
-    <AMeta :author="post.primary_author" :timestamp="post.created_at" />
+    <AMeta
+      class="mt-3"
+      :author="post.primary_author"
+      :timestamp="post.created_at"
+    />
   </div>
 </template>
 
