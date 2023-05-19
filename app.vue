@@ -1,6 +1,12 @@
 <script setup lang="ts">
 const { data } = await useFetch(`/api/setting`);
 
+useHead({
+  htmlAttrs: {
+    lang: "vi",
+  },
+});
+
 useSeoMeta({
   ogLocale: data.value?.lang,
   ogSiteName: data.value?.title,

@@ -8,7 +8,7 @@ const { data } = await useFetch(`/api/setting`);
       class="container mx-auto flex items-center gap-3 overflow-x-scroll px-3 sm:overflow-x-hidden"
     >
       <NuxtLink href="/" class="flex-shrink-0 px-3 py-4">
-        <img src="/logo.svg" class="h-6" />
+        <img src="/logo.svg" class="h-6" alt="Tana Blog logo" />
       </NuxtLink>
       <div v-if="data && data.navigation" class="flex items-center gap-3">
         <NuxtLink
