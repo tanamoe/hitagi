@@ -32,6 +32,16 @@ export default defineNuxtConfig({
       },
     },
   },
+  routeRules: {
+    // homepage re-validate every 10 minutes
+    "/": { swr: 600 },
+    // archive-related pages re-validate every 30 minutes
+    "/archives/**": { swr: 1800 },
+    "/author/**": { swr: 1800 },
+    "/tags/**": { swr: 1800 },
+    // post re-validate every 1 hour
+    "/posts/**": { isr: 3600 },
+  },
   runtimeConfig: {
     ghost_url: process.env.GHOST_URL,
     ghost_content_key: process.env.GHOST_CONTENT_KEY,
