@@ -5,6 +5,8 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-icon",
     "@nuxt/image-edge",
+    "nuxt-simple-sitemap",
+    "nuxt-simple-robots",
   ],
   googleFonts: {
     families: {
@@ -45,5 +47,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     ghost_url: process.env.GHOST_URL,
     ghost_content_key: process.env.GHOST_CONTENT_KEY,
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+    },
   },
 });
