@@ -5,6 +5,7 @@ useHead({
   htmlAttrs: {
     lang: "vi",
   },
+  meta: [{ property: "article:publisher", content: data.value?.facebook }],
 });
 
 useSeoMeta({

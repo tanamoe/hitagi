@@ -11,6 +11,15 @@ if (error.value)
     statusMessage: error.value.statusMessage,
   });
 
+useHead({
+  meta: [
+    {
+      property: "article:publisher",
+      content: data.value?.primary_author?.facebook || undefined,
+    },
+  ],
+});
+
 useSeoMeta({
   title: `${data.value?.title} - Tana Blog`,
   author: data.value?.primary_author?.name,
