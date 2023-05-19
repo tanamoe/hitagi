@@ -16,6 +16,10 @@ useSeoMeta({
   description: setting.value?.description,
   ogDescription: setting.value?.og_description,
   ogImage: setting.value?.og_image || setting.value?.cover_image,
+  twitterImage:
+    setting.value?.twitter_image ||
+    setting.value?.og_image ||
+    setting.value?.cover_image,
 });
 </script>
 
