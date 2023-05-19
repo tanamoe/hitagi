@@ -54,17 +54,19 @@ defineProps<{
   animation: imagescroll 1s cubic-bezier(0.3, 1, 0.7, 1);
 }
 
-.feature-image img {
+.feature-image picture {
   animation: fadein 750ms ease-in;
 }
 
 @keyframes fadein {
   0% {
     opacity: 0;
+    filter: blur(1rem);
   }
 
   100% {
     opacity: 1;
+    filter: unset;
   }
 }
 
