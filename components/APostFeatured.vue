@@ -36,7 +36,7 @@ defineProps<{
       </div>
     </NuxtLink>
     <AMeta
-      class="mt-3"
+      class="mt-3 px-6 sm:px-0"
       :author="post.primary_author"
       :timestamp="post.created_at"
     />
