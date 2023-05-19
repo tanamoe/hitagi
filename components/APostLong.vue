@@ -17,6 +17,9 @@ defineProps<{
         provider="ghost"
         :src="post.feature_image"
         :alt="post.feature_image_alt || undefined"
+        :img-attrs="{
+          class: 'w-full',
+        }"
       />
     </div>
     <div class="flex-1 px-6 sm:px-0">
