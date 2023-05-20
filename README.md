@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-<img src="https://api.netlify.com/api/v1/badges/ec7adb99-d47e-45cb-88c6-797f7cf70e67/deploy-status"/>
+<img src="https://api.netlify.com/api/v1/badges/ec7adb99-d47e-45cb-88c6-797f7cf70e67/deploy-status"/> <img src="https://betteruptime.com/status-badges/v1/monitor/pyux.svg"/>
 </p>
 
 Hitagi (Senjougahara) is a Nuxt-based front-end for Ghost, using [violet](https://github.com/tanamoe/violet) in production.
