@@ -39,11 +39,11 @@ export default defineNuxtConfig({
   },
   routeRules: {
     // homepage re-validate every 10 minutes
-    "/": { swr: 600 },
+    "/": { isr: 600 },
     // archive-related pages re-validate every 30 minutes
-    "/archives/**": { swr: 1800 },
-    "/author/**": { swr: 1800 },
-    "/tags/**": { swr: 1800 },
+    "/archives/**": { isr: 1800 },
+    "/author/**": { isr: 1800 },
+    "/tags/**": { isr: 1800 },
     // post re-validate every 1 hour
     "/posts/**": { isr: 3600 },
   },
