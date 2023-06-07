@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <div class="flex items-center gap-3">
-    <NuxtLink v-if="author" :href="`/author/${author.slug}`">
+    <NuxtLink v-if="author" :to="`/author/${author.slug}`">
       <div class="flex items-center gap-3">
         <img
           v-if="author.profile_image"
