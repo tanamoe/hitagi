@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <div>
-    <NuxtLink v-if="page > 1" :href="`/archives/${page - 1}`">first</NuxtLink>
-    <NuxtLink v-if="page < total" :href="`/archives/${total}`">last</NuxtLink>
+    <NuxtLink v-if="page > 1" :to="`/archives/${page - 1}`">first</NuxtLink>
+    <NuxtLink v-if="page < total" :to="`/archives/${total}`">last</NuxtLink>
   </div>
 </template>

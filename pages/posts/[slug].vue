@@ -59,7 +59,7 @@ useSeoMeta({
         <div class="mb-3">
           <NuxtLink
             v-if="data.primary_tag"
-            :href="`/tags/${data.primary_tag.slug}`"
+            :to="`/tags/${data.primary_tag.slug}`"
             class="font-bold uppercase text-zinc-600"
             :style="{ color: data.primary_tag.accent_color || undefined }"
           >

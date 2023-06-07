@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div>
-    <NuxtLink :href="`/posts/${post.slug}`" class="article">
+    <NuxtLink :to="`/posts/${post.slug}`" class="article">
       <div class="flex flex-col items-center gap-6 md:flex-row">
         <div class="feature-image w-full transition-shadow md:w-72">
           <nuxt-picture

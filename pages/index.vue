@@ -37,10 +37,7 @@ useSeoMeta({
         <APostShort v-else :post="post" />
       </div>
     </div>
-    <NuxtLink
-      href="/archives/1"
-      class="flex items-center justify-end gap-3 px-6"
-    >
+    <NuxtLink to="/archives/1" class="flex items-center justify-end gap-3 px-6">
       <span>Xem thêm</span><Icon name="bi:arrow-right" />
     </NuxtLink>
   </div>
