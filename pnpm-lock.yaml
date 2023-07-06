@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^0.4.0
     version: 0.4.0(vue@3.3.4)
   nuxt-simple-robots:
-    specifier: ^2.3.0
-    version: 2.3.0
+    specifier: ^3.0.0
+    version: 3.0.0
   nuxt-simple-sitemap:
     specifier: ^2.5.0
     version: 2.5.0
@@ -5065,12 +5065,14 @@ packages:
       - vue
     dev: true
 
-  /nuxt-simple-robots@2.3.0:
-    resolution: {integrity: sha512-ZiDPycr/MAhaQ5KxAojCBJA37vzz1jg8yxNRmn1I38sHnYi8DWHIJyJKXYI+jatqgKyFrMhyQnvVTK+SOS0w2A==}
+  /nuxt-simple-robots@3.0.0:
+    resolution: {integrity: sha512-sVy7RKiyHJY1hbSKk7Oe57SX6LMAqp5VWoPZtVCPEEszhPjvgE/pBgGTn6HvwladQ1BVIYbNieisy4GTLXhe7w==}
     dependencies:
-      '@nuxt/kit': 3.5.0
+      '@nuxt/kit': 3.6.1
       defu: 6.1.2
-      pathe: 1.1.0
+      nuxt-site-config: 0.8.5
+      nuxt-site-config-kit: 0.8.5
+      pathe: 1.1.1
       ufo: 1.1.2
     transitivePeerDependencies:
       - rollup
@@ -5088,6 +5090,31 @@ packages:
       knitwork: 1.0.0
       pathe: 1.1.0
       radix3: 1.0.1
+      ufo: 1.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /nuxt-site-config-kit@0.8.5:
+    resolution: {integrity: sha512-9oZcnzGV4ma//aQ9TAUvZziO7Isbtnb1ogkDbz5jIWbZR6f+N/14onxOIsClwWAB3bIEB6fg8e4z8gNhTyhNyg==}
+    dependencies:
+      '@nuxt/kit': 3.6.1
+      defu: 6.1.2
+      pkg-types: 1.0.3
+      site-config-stack: 0.8.5
+      ufo: 1.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /nuxt-site-config@0.8.5:
+    resolution: {integrity: sha512-qcbF8g9OZx5/rcFIeY8kSbLJxNhRXMydYEp2bwvNXlULCiwKiBqzLfZw58nGAhcE+Mb2zjzIw30RhYeISPfVpQ==}
+    dependencies:
+      '@nuxt/kit': 3.6.1
+      nuxt-site-config-kit: 0.8.5
+      site-config-stack: 0.8.5
       ufo: 1.1.2
     transitivePeerDependencies:
       - rollup
@@ -6471,6 +6498,18 @@ packages:
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+    dev: true
+
+  /site-config-stack@0.8.5:
+    resolution: {integrity: sha512-RsXcvMeopZZ8HC4sgVX0aT5qSEPZ6GpHkr3KWeWeTzPJ6w7A1s0DxR9ZJrNved5Mh+t+tH2JNUou9RvQmHrmVA==}
+    dependencies:
+      '@nuxt/kit': 3.6.1
+      defu: 6.1.2
+      pkg-types: 1.0.3
+      ufo: 1.1.2
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /slash@3.0.0:
