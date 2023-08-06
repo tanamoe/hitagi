@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "nuxt-icon",
-    "@nuxt/image-edge",
+    "@nuxt/image",
     "nuxt-simple-sitemap",
     "nuxt-simple-robots",
   ],
