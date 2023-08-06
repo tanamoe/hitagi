@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "nuxt-icon",
-    "@nuxt/image-edge",
+    "@nuxt/image",
     "nuxt-simple-sitemap",
     "nuxt-simple-robots",
   ],
@@ -52,6 +52,18 @@ export default defineNuxtConfig({
     ghost_content_key: process.env.GHOST_CONTENT_KEY,
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+    },
+  },
+  // TODO: remove this in the future after Netlify done fixing.
+  // ref: https://answers.netlify.com/t/javascript-heap-out-of-memory-when-trying-to-build-a-nuxt-app/93138/13
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+      cssnano:
+        process.env.NODE_ENV === "production"
+          ? { preset: ["default", { discardComments: { removeAll: true } }] }
+          : false, // disable cssnano when not in production
     },
   },
 });
