@@ -11,7 +11,6 @@ if (error.value)
   });
 
 useSeoMeta({
-  title: setting.value?.title,
   ogTitle: setting.value?.og_title,
   description: setting.value?.description,
   ogDescription: setting.value?.og_description,

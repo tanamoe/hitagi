@@ -5,6 +5,9 @@ useHead({
   htmlAttrs: {
     lang: "vi",
   },
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - Tana Blog` : "Tana Blog";
+  },
   meta: [{ property: "article:publisher", content: data.value?.facebook }],
 });
 

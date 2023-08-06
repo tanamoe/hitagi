@@ -16,7 +16,7 @@ if (error.value)
 const author = data.value?.at(0)?.primary_author;
 
 useSeoMeta({
-  title: `Tác giả ${author?.name} - Tana Blog`,
+  title: `Tác giả ${author?.name}`,
   ogTitle: `Tác giả ${author?.name}`,
   description: author?.meta_description,
   ogDescription: author?.meta_description,
