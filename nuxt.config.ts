@@ -39,13 +39,15 @@ export default defineNuxtConfig({
   },
   routeRules: {
     // homepage re-validate every 10 minutes
-    "/": { isr: 600 },
+    "/": { prerender: true, isr: 600 },
     // archive-related pages re-validate every 30 minutes
     "/archives/**": { isr: 1800 },
     "/author/**": { isr: 1800 },
     "/tags/**": { isr: 1800 },
     // post re-validate every 1 hour
     "/posts/**": { isr: 3600 },
+    // add cors headers on API routes, and cache for 30 mins
+    "/api/**": { isr: 1800, cors: true },
   },
   runtimeConfig: {
     ghost_url: process.env.GHOST_URL,
