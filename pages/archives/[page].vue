@@ -14,7 +14,7 @@ if (error.value)
   });
 
 useSeoMeta({
-  title: `Lưu trữ trang ${route.params.page} - Tana Blog`,
+  title: `Lưu trữ trang ${route.params.page}`,
   ogTitle: `Lưu trữ trang ${route.params.page}`,
 });
 </script>

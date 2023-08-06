@@ -21,7 +21,7 @@ useHead({
 });
 
 useSeoMeta({
-  title: `${data.value?.title} - Tana Blog`,
+  title: `${data.value?.title}`,
   author: data.value?.primary_author?.name,
   ogType: "article",
   ogTitle: data.value?.og_title || data.value?.title,

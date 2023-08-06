@@ -16,7 +16,7 @@ if (error.value)
 const tag = data.value?.at(0)?.primary_tag;
 
 useSeoMeta({
-  title: `${tag?.name} - Tana Blog`,
+  title: `${tag?.name}`,
   ogTitle: tag?.og_title || tag?.name,
   description: tag?.description,
   ogDescription:
