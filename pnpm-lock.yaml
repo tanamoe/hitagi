@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^0.5.0
     version: 0.5.0(vue@3.3.4)
   nuxt-simple-robots:
-    specifier: ^2.3.0
-    version: 2.3.0
+    specifier: ^3.0.0
+    version: 3.0.0
   nuxt-simple-sitemap:
     specifier: ^3.0.0
     version: 3.0.0(nuxt@3.6.5)(vite@4.3.9)
@@ -4922,11 +4922,13 @@ packages:
       - vue
     dev: true
 
-  /nuxt-simple-robots@2.3.0:
-    resolution: {integrity: sha512-ZiDPycr/MAhaQ5KxAojCBJA37vzz1jg8yxNRmn1I38sHnYi8DWHIJyJKXYI+jatqgKyFrMhyQnvVTK+SOS0w2A==}
+  /nuxt-simple-robots@3.0.0:
+    resolution: {integrity: sha512-sVy7RKiyHJY1hbSKk7Oe57SX6LMAqp5VWoPZtVCPEEszhPjvgE/pBgGTn6HvwladQ1BVIYbNieisy4GTLXhe7w==}
     dependencies:
       '@nuxt/kit': 3.6.5
       defu: 6.1.2
+      nuxt-site-config: 0.8.17
+      nuxt-site-config-kit: 0.8.17
       pathe: 1.1.1
       ufo: 1.2.0
     transitivePeerDependencies:
