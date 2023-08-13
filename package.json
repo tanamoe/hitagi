@@ -24,7 +24,7 @@
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "^14.0.0",
     "nuxt": "^3.6.5",
     "nuxt-icon": "^0.5.0",
     "nuxt-simple-robots": "^3.0.0",
