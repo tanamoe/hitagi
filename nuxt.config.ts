@@ -54,6 +54,8 @@ export default defineNuxtConfig({
     ghost_content_key: process.env.GHOST_CONTENT_KEY,
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+      umamiUrl: process.env.UMAMI_URL,
+      umamiSiteId: process.env.UMAMI_SITE_ID,
     },
   },
   // TODO: remove this in the future after Netlify done fixing.
