@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
+
 const { data } = await useFetch(`/api/setting`);
 
 useHead({
@@ -9,6 +11,13 @@ useHead({
     return titleChunk ? `${titleChunk} - Tana Blog` : "Tana Blog";
   },
   meta: [{ property: "article:publisher", content: data.value?.facebook }],
+  script: [
+    {
+      async: true,
+      src: runtimeConfig.public.umamiUrl,
+      "data-website-id": runtimeConfig.public.umamiSiteId,
+    },
+  ],
 });
 
 useSeoMeta({
