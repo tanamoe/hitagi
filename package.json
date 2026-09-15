@@ -16,7 +16,7 @@
     ]
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/eslint-config": "^0.7.0",
     "@nuxt/image": "1.0.0-rc.3",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.7.0",
